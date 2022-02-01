@@ -1,11 +1,12 @@
 {
-  "name": "node-typescript-boilerplate",
-  "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "name": "pero-personal-assistant-mono",
+  "version": "0.0.1",
+  "description": "Pero Ichwan's personal assistant mono repo",
   "engines": {
     "node": ">= 16.13 <17"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/jest": "~27.0.2",
     "@types/node": "~16.11.6",
     "@typescript-eslint/eslint-plugin": "~5.7.0",
@@ -13,6 +14,7 @@
     "eslint": "~8.4.1",
     "eslint-config-prettier": "~8.3.0",
     "eslint-plugin-jest": "~25.3.0",
+    "express": "^4.17.2",
     "jest": "~27.4.4",
     "prettier": "~2.5.1",
     "rimraf": "~3.0.2",
@@ -21,7 +23,7 @@
     "typescript": "~4.5.3"
   },
   "scripts": {
-    "start": "node build/src/main.js",
+    "start": "nodemon build/src/server.js",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run lint",
     "build": "tsc -p tsconfig.release.json",
@@ -30,9 +32,12 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "author": "Jakub Synowiec <jsynowiec@users.noreply.github.com>",
+  "author": "@Ichwan Haryo Sembodo, template by @Jakub Synowiec",
   "license": "Apache-2.0",
   "dependencies": {
+    "@types/express": "^4.17.13",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
     "tslib": "~2.3.1"
   },
   "volta": {
